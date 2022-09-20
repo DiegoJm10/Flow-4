@@ -39,9 +39,13 @@ Para ejecutar este flow, es necesario lo siguiente.
 5. En el bloque de `Temperatura` y `Humedad` se debe colocar lo siguente:
 
 - On message: 
-`msg.payload = msg.payload temp;`
-`msg.topic = "Temperatura";`
-`return msg;`
+
+msg.payload = msg.payload temp;
+
+msg.topic = "Temperatura";
+
+return msg;
+
 7. Hacer clic en el boton Deploy.
 
 ### Instrucciones de operación:
