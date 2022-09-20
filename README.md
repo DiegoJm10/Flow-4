@@ -39,35 +39,39 @@ Para ejecutar este flow, es necesario lo siguiente.
 5. En el bloque de `Temperatura` y `Humedad` se debe colocar lo siguente:
 
 - On message: 
+```
+ msg.payload = msg.payload temp;
 
-msg.payload = msg.payload temp;
+ msg.topic = "Temperatura";
 
-msg.topic = "Temperatura";
-
-return msg;
-
-7. Hacer clic en el boton Deploy.
+ return msg;
+```
+6. En la parte de Graficas e indicadores solo es editar al gusto.
+7. Abriremos el Dashboard y colocaremos un `Tab` y dentro del `Tab` colocaremos un `group`.
+8. Hacer clic en el boton Deploy.
 
 ### Instrucciones de operación:
 1. Abriremos dashboard en el siguente servidor. [localhost:1880/ui](http://localhost:1880/ui)
 
-2. Mandaremos los datos por mosquito(Terminal)con los siguentes datos 'mosquitto_pub -h localhost -t codigoIoT/Mor/mqtt/flow4 -m '{"ID":"Diego Jasso","temp":21,"hum":73}'.
-
+2. Mandaremos los datos por mosquito(Terminal)con los siguentes datos:
+```
+mosquitto_pub -h localhost -t codigoIoT/Mor/mqtt/flow4 -m '{"ID":"Diego Jasso","temp":21,"hum":73}
+```
 ![](https://github.com/DiegoJm10/Flow-4/blob/main/Captura%20desde%202022-09-19%2012-51-58.png?raw=true)
 
 
 ## Resultados
 Los resultados son los siguentes tenemos dos imagenes que lo representa
 
-![](https://github.com/DiegoJm10/Flow-3/blob/main/Captura%20desde%202022-09-19%2010-47-21.png?raw=true)
-[Bloques de función.](https://github.com/DiegoJm10/Flow-3/blob/main/Captura%20desde%202022-09-19%2010-47-21.png?raw=true)
+![](https://github.com/DiegoJm10/Flow-4/blob/main/Captura%20desde%202022-09-19%2012-46-25.png?raw=true)
+[Bloques de función.](https://github.com/DiegoJm10/Flow-4/blob/main/Captura%20desde%202022-09-19%2012-46-25.png?raw=true)
 
-![](https://github.com/DiegoJm10/Flow-3/blob/main/Captura%20desde%202022-09-19%2010-47-46.png?raw=true)
-[Dashboard.](https://github.com/DiegoJm10/Flow-3/blob/main/Captura%20desde%202022-09-19%2010-47-46.png?raw=true)
+![](https://github.com/DiegoJm10/Flow-4/blob/main/Captura%20desde%202022-09-19%2012-47-09.png?raw=true)
+[Dashboard.](https://github.com/DiegoJm10/Flow-4/blob/main/Captura%20desde%202022-09-19%2012-47-09.png?raw=true)
 
 ## Evidencias
 
-- [Youtube](https://youtu.be/Ecavr7AX_8k)
+- [Youtube](https://youtu.be/nL-me1Geef4)
 
 ## Creditos
 Desarrollado por Ing. Diego Jasso Miranda
